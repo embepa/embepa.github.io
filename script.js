@@ -364,3 +364,21 @@ function updateMovingText() {
 // Call the updateMovingText function initially to set the initial text
 updateMovingText();
 setInterval(updateMovingText, 1000);
+
+
+function changeHeartPosition() {
+    // Generate random x and y coordinates within the canvas dimensions
+    var newX = Math.floor(Math.random() * window.innerWidth * 0.5);
+    var newY = Math.floor(Math.random() * window.innerHeight * 0.5);
+
+    var rand_h_direct = Math.random() > 0.5 ? 1 : -1;
+    var rand_v_direct = Math.random() > 0.5 ? 1 : -1;
+
+    // Update the position of the heart
+    document.getElementById('pinkboard').style.left = (rand_h_direct * newX) + 'px';
+    document.getElementById('pinkboard').style.top = (rand_v_direct * newY) + 'px';
+}
+
+// Call the function to change the heart position every 2 seconds
+setInterval(changeHeartPosition, 5000);
+
