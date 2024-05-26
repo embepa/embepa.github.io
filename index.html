@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>EmBé</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body id="animatedImageContainer">
+  <div class="box">
+    <canvas id="pinkboard"></canvas>
+  </div>
+
+  <div class="modal" id="startModal">
+    <div class="modal-content">
+      <p class="modal-text">🐶 của bé 🐱</p>
+      <button class="modal-button" onclick="start()">🎻 oce 🎶</button>
+    </div>
+  </div>
+
+  <div class="center-text">
+    <span>
+      <span class="small-text">bé iu</span>
+      <br>
+      <span class="big-text">Phương Anh</span>
+      <br>
+      <span class="tiny-text">múp</span>
+    </span>
+  </div>
+
+  <audio id="audio" class="audio-control" loop>
+    <source src="media/music/doiloi.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="scrolling-text-container">
+    <div class="scrolling-text" id="heartMessage"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
