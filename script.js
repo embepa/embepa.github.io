@@ -180,8 +180,8 @@ var ParticlePool = (function() {
     // get point on heart with -PI <= t <= PI
     function pointOnHeart(t) {
         return new Point(
-            160 * Math.pow(Math.sin(t), 3),
-            130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
+            200 * Math.pow(Math.sin(t), 3),
+            160 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
         );
     }
 
@@ -285,8 +285,8 @@ window.onload = function() {
         animatedImage.style.top = yPos + 'px';
 
         // Randomly rotate the image
-        var rotation = Math.random() * 360;
-        animatedImage.style.transform = 'rotate(' + rotation + 'deg)';
+        // var rotation = Math.random() * 360;
+        // animatedImage.style.transform = 'rotate(' + rotation + 'deg)';
 
         // Randomly scale the image
         var scale = Math.random() * 0.5 * Math.random() + Math.random() * 0.5;
@@ -301,7 +301,7 @@ window.onload = function() {
         // Hide the image after a delay
         setTimeout(function() {
             container.removeChild(animatedImage);
-        }, 1200); // Adjust the delay as needed
+        }, 3000); // Adjust the delay as needed
     }
 
     // Create a random number of images initially
@@ -316,7 +316,7 @@ window.onload = function() {
         for(var i = 0; i < numberOfImages; i++) {
             createImage();
         }
-    }, 1000); // Adjust the interval as needed
+    }, 2000); // Adjust the interval as needed
 };
 
 // List of text items
@@ -343,10 +343,6 @@ var textList = [
     "vợ ơi",
     "em bé của anh",
     "hihi",
-    "cho a sạc điii",
-    "doggy",
-    "truyền thống nhe",
-    "bé múp",
 ];
 
 // Function to select a random item from the text list
@@ -380,5 +376,5 @@ function changeHeartPosition() {
 }
 
 // Call the function to change the heart position every 2 seconds
-setInterval(changeHeartPosition, 5000);
+// setInterval(changeHeartPosition, 5000);
 
