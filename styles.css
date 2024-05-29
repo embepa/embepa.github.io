@@ -4,7 +4,10 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to top left, #012745, #0582e2 30%, #22e629 70%, #f321c6);
+    background: 
+        url("media/image/15.png") right top no-repeat,
+        url("media/image/15.png") left top no-repeat,
+        linear-gradient(to top left, #012745, #0582e2, #22e629, #f321c6);
     display: flex;
     justify-content: center;
     align-items: center;

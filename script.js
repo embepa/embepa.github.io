@@ -301,11 +301,11 @@ window.onload = function() {
         // Hide the image after a delay
         setTimeout(function() {
             container.removeChild(animatedImage);
-        }, 3000); // Adjust the delay as needed
+        }, 5000); // Adjust the delay as needed
     }
 
     // Create a random number of images initially
-    var numberOfImages = Math.floor(Math.random() * 5) + 1; // Random number between 1 and 5
+    var numberOfImages = 2; // Math.floor(Math.random() * 5) + 1; // Random number between 1 and 5
     for(var i = 0; i < numberOfImages; i++) {
         createImage();
     }
@@ -316,11 +316,11 @@ window.onload = function() {
         for(var i = 0; i < numberOfImages; i++) {
             createImage();
         }
-    }, 2000); // Adjust the interval as needed
+    }, 3000); // Adjust the interval as needed
 };
 
 // List of text items
-var textList = [
+var textList_0 = [
     "I love You",
     "I ♥ U",
     "anh iu bé",
@@ -345,10 +345,25 @@ var textList = [
     "hihi",
 ];
 
+var textList_1 = [
+    "240416",
+    "Virgo ♥ Taurus",
+    "Day & Night",
+    "Awake & Sleep",
+    "Sun & Moon",
+    "Reality & Dream",
+    "Virgo Taurus Day Night Awake Sleep Sun Moon Reality Dream",
+]
+
 // Function to select a random item from the text list
 function getRandomText() {
-    var randomIndex = Math.floor(Math.random() * textList.length);
-    return textList[randomIndex];
+    if (Math.random() > 0.5) {
+        var randomIndex = Math.floor(Math.random() * textList_0.length);
+        return textList_0[randomIndex];
+    } else {
+        var randomIndex = Math.floor(Math.random() * textList_1.length);
+        return textList_1[randomIndex];
+    }
 }
 
 // Function to update the moving text with a random item from the list
@@ -359,7 +374,7 @@ function updateMovingText() {
 
 // Call the updateMovingText function initially to set the initial text
 updateMovingText();
-setInterval(updateMovingText, 1000);
+setInterval(updateMovingText, 2000);
 
 
 function changeHeartPosition() {
