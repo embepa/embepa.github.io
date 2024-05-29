@@ -301,11 +301,11 @@ window.onload = function() {
         // Hide the image after a delay
         setTimeout(function() {
             container.removeChild(animatedImage);
-        }, 5000); // Adjust the delay as needed
+        }, 4000); // Adjust the delay as needed
     }
 
     // Create a random number of images initially
-    var numberOfImages = 2; // Math.floor(Math.random() * 5) + 1; // Random number between 1 and 5
+    var numberOfImages = 1; // Math.floor(Math.random() * 5) + 1; // Random number between 1 and 5
     for(var i = 0; i < numberOfImages; i++) {
         createImage();
     }
@@ -316,7 +316,7 @@ window.onload = function() {
         for(var i = 0; i < numberOfImages; i++) {
             createImage();
         }
-    }, 3000); // Adjust the interval as needed
+    }, 4000); // Adjust the interval as needed
 };
 
 // List of text items
