@@ -6,12 +6,26 @@ body {
     margin: 0;
     background: 
         url("media/image/15.png") right top no-repeat,
-        url("media/image/15.png") left top no-repeat,
         linear-gradient(to top left, #012745, #0582e2, #22e629, #f321c6);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("media/image/16.png") left top no-repeat;
+    background-size: auto; /* Adjust as needed */
+    opacity: 1; /* Set the desired opacity */
+    pointer-events: none; /* Ensures the pseudo-element doesn't interfere with other content */
 }
 
 #animatedImageContainer {
